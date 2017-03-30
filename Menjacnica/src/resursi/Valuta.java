@@ -13,37 +13,60 @@ public class Valuta {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if(naziv != null||!naziv.isEmpty())
 		this.naziv = naziv;
+		else
+			throw new RuntimeException("Niste uneli naziv.");
 	}
 	public String getSkrVal() {
 		return skrVal;
 	}
 	public void setSkrVal(String skrVal) {
+		if(skrVal != null||!skrVal.isEmpty())
 		this.skrVal = skrVal;
+		else
+			throw new RuntimeException("Niste uneli skracenicu.");
+
 	}
 	public GregorianCalendar getDatumVal() {
 		return datumVal;
 	}
 	public void setDatumVal(GregorianCalendar datumVal) {
+		if(datumVal!=null)
 		this.datumVal = datumVal;
+		else
+			throw new RuntimeException("Niste uneli datum.");
+
 	}
 	public double getProdKurs() {
 		return prodKurs;
 	}
 	public void setProdKurs(double prodKurs) {
+		if(prodKurs > 0)
 		this.prodKurs = prodKurs;
+		else
+			throw new RuntimeException("Niste uneli prodajni kurs.");
+
 	}
 	public double getKupKurs() {
 		return kupKurs;
 	}
 	public void setKupKurs(double kupKurs) {
+		if(kupKurs > 0)
 		this.kupKurs = kupKurs;
+		else
+			throw new RuntimeException("Niste uneli kupovni kurs.");
+
 	}
 	public double getSredKurs() {
 		return sredKurs;
 	}
 	public void setSredKurs(double sredKurs) {
+		if(sredKurs > 0)
 		this.sredKurs = sredKurs;
+		else
+		throw new RuntimeException("Niste uneli srednji kurs.");
+
 	}
 	@Override
 	public int hashCode() {
