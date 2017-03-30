@@ -10,8 +10,14 @@ public class RadSaValutama implements InterfejsMenjacnica {
 	@Override
 	public void dodajKurs(ArrayList<Valuta> valute, String nazVal, String skrVal, double kupKurs, double sredKurs,
 			double prodKurs, GregorianCalendar datumVal) {
-		// TODO Auto-generated method stub
-
+			Valuta v = new Valuta();
+			v.setDatumVal(datumVal);
+			v.setKupKurs(kupKurs);
+			v.setProdKurs(prodKurs);
+			v.setSredKurs(sredKurs);
+			v.setNaziv(nazVal);
+			v.setSkrVal(skrVal);
+			valute.add(v);
 	}
 
 	@Override
