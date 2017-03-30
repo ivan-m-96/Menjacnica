@@ -9,11 +9,24 @@ public class Valuta {
 	private double prodKurs;
 	private double kupKurs;
 	private double sredKurs;
+	
+	
+	public Valuta(String naziv, String skrVal, GregorianCalendar datumVal, double prodKurs, double kupKurs,
+			double sredKurs) {
+		super();
+		this.naziv = naziv;
+		this.skrVal = skrVal;
+		this.datumVal = datumVal;
+		this.prodKurs = prodKurs;
+		this.kupKurs = kupKurs;
+		this.sredKurs = sredKurs;
+	}
+
 	public String getNaziv() {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
-		if(naziv != null||!naziv.isEmpty())
+		if(naziv != null || !naziv.isEmpty())
 		this.naziv = naziv;
 		else
 			throw new RuntimeException("Niste uneli naziv.");
@@ -22,7 +35,7 @@ public class Valuta {
 		return skrVal;
 	}
 	public void setSkrVal(String skrVal) {
-		if(skrVal != null||!skrVal.isEmpty())
+		if(skrVal != null || !skrVal.isEmpty())
 		this.skrVal = skrVal;
 		else
 			throw new RuntimeException("Niste uneli skracenicu.");
